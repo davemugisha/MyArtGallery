@@ -14,7 +14,7 @@ public class CorsConfig {
             @Override
             public void addCorsMappings(CorsRegistry registry) {
                 registry.addMapping("/**")
-                        .allowedOrigins("https://my-art-gallery-seven.vercel.app/", "http://localhost:3000", "")
+                        .allowedOrigins("https://my-art-gallery-seven.vercel.app/", "http://localhost:3000", "https://myartgallery.onrender.com")
                         .allowedMethods("*") // Allow all HTTP methods
                         .allowedHeaders("*") // Allow all headers
                         .allowCredentials(true); // some changes
