@@ -17,7 +17,7 @@ public class CorsConfig {
                         .allowedOrigins("https://my-art-gallery-seven.vercel.app/", "http://localhost:3000", "")
                         .allowedMethods("*") // Allow all HTTP methods
                         .allowedHeaders("*") // Allow all headers
-                        .allowCredentials(true);
+                        .allowCredentials(true); // some changes
             }
         };
     }
