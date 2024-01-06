@@ -41,7 +41,7 @@ public class ImageService {
     // private String IMAGE_FOLDER = "C:\\Users\\david\\Desktop\\MyArtGallery\\Images";
 
     // Save in Online Mode (Not Working, I think)
-    private String IMAGE_FOLDER = "C:\\Users\\david\\Desktop\\MyArtGallery\\Images";
+    private String IMAGE_FOLDER = "..\\..\\..\\..\\Images";
 
     public boolean uploadImage(MultipartFile file, String title, int user_id, List<Keyword> keywords) throws IOException {
         Image img = new Image();
