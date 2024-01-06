@@ -36,8 +36,8 @@ public class ImageController {
                                               @RequestParam("user_id") Integer user_id,
                                               @RequestParam("keywords") List<String> keywordNames) {
         // Display what values were received
-        System.out.println("Received parameters - file: " + file + ", title: " + title + ", user_id: " + user_id + ", keywords: " + keywordNames);
         List<Keyword> keywordsList = keywordService.saveAndGetAllKeywords(keywordNames);
+        System.out.println("keywords:" + keywordsList);
 
         try {
             boolean result = imageService.uploadImage(file,title,user_id,keywordsList);

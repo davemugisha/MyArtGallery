@@ -19,6 +19,7 @@ import java.net.MalformedURLException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
 
@@ -36,8 +37,11 @@ public class ImageService {
     @Autowired
     private KeywordInterface keywordInterface;
 
-    @Value("${image.upload.directory}")
-    private String IMAGE_FOLDER;
+    // Saving in Offline Mode (Working!!!)
+    // private String IMAGE_FOLDER = "C:\\Users\\david\\Desktop\\MyArtGallery\\Images";
+
+    // Save in Online Mode (Not Working, I think)
+    private String IMAGE_FOLDER = "C:\\Users\\david\\Desktop\\MyArtGallery\\Images";
 
     public boolean uploadImage(MultipartFile file, String title, int user_id, List<Keyword> keywords) throws IOException {
         Image img = new Image();
@@ -68,7 +72,6 @@ public class ImageService {
             return false;
         }
     }
-
 
     public Resource downloadImage(String imageUrl) throws MalformedURLException {
         Path filePath = Paths.get(IMAGE_FOLDER).resolve(imageUrl).normalize();
